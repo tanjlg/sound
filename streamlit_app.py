@@ -100,7 +100,7 @@ length_inv = df['1/L /cm-1']
          
 st.markdown("Plot the graph of $f/$Hz against $\frac{1}{L}/$cm$^{-1}$.")
 fig, ax = plt.subplots()
-plt.plot(length-inv, freq, 'x', markersize=3)
+plt.plot(length_inv, freq, 'x', markersize=3)
 plt.title('Scatterplot of Period squared against length of the pendulum')
 plt.xlim(0,120)
 plt.ylim(0,4.5)
