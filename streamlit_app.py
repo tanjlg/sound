@@ -78,3 +78,51 @@ st.download_button(
      file_name='data_raw.csv',
      mime='text/csv',
  )
+
+
+st.header('Part III: Data Analysis')
+st.write('In Part III of the experiment, you will be processing the collected data and inferring the relationship between the period and length of the pendulum.')
+
+st.markdown("7. By using an Excel Spreadsheet or otherwise, calculate $1/L /cm$ and record it in the corresponding entry in the CSV file.")
+
+data_com = st.file_uploader("Upload the csv file with the inputted raw data and the derived quantities you computed.")
+N = 8 # for computing root-mean-squared error
+
+if data_com is not None:
+  df = pd.read_csv(data_com)
+  st.write(df)
+  T2 = df['T^2/s^2']
+  length = df['length/cm']
+  N = np.count_nonzero(T2)
+
+freq = df['f/Hz']
+length_inv = df['1/L /cm-1']
+         
+st.markdown("Plot the graph of $f/$Hz against $\frac{1}{L}/$cm$^{-1}$.")
+fig, ax = plt.subplots()
+plt.plot(length, T2, 'x', markersize=3)
+plt.title('Scatterplot of Period squared against length of the pendulum')
+plt.xlim(0,120)
+plt.ylim(0,4.5)
+plt.grid(b=True)
+plt.xlabel('1 / Length of Pendulum/ cm-1')
+plt.ylabel('Frequency/ Hz')
+
+if st.button('Plot'):
+    st.pyplot(fig)
+    
+st.markdown('10. By manipulating the line to minimise the error value, deduce the relationship between the period $T$ and length $l$ of the pendulum. The root-mean-square error (RMSE) is similar to the standard deviation of a dataset except that it calculates the sum of squared distances from the hypothesised interpolated period squared $\hat{T^2}$ instead of the mean $<T^2>$.')
+m = st.slider('Gradient', min_value=0.00, max_value=0.10, value=0.04, step=0.0001)
+c = st.slider('Intercept (vertical)', min_value=-0.20, max_value=0.20, value=0.0, step=0.01)
+# root-mean-square deviation error
+residuals = T2-(m*length+c)
+sum_squared_error = np.sum(residuals**2)
+rms_error= np.sqrt(sum_squared_error/N)
+st.write('Error: ')
+st.write(rms_error)
+
+plt.plot(length, m*length+c)
+plt.title('Linear fit of Period squared against length of the pendulum')
+plt.xlim(0,120)
+plt.ylim(0,4.5)     
+st.pyplot(fig)
