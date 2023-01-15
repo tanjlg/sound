@@ -42,6 +42,11 @@ Analyse the problem and produce an appropriate plan for your investigation. In y
 - state the problem you are investigating
 - list all variables (variables to be kept constant and those to be changed)
 - write your suggested procedure as a series of step-by-step instructions
--
+- describe how data collected are processed
+- include diagram(s) of the investigation set-up
+- any safety precautions
 """
 )
+
+df = pd.DataFrame({'length/cm': length, 'f/Hz': f, 'T/s': freq1, '1/T/Hz': freq2, '1/L/cm-1': length_inv})
+st.write(df)
