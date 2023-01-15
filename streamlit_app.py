@@ -54,8 +54,14 @@ length, freq1, freq2, period, length_inv = np.zeros(8, dtype=np.float16), np.zer
 
 length[0] = st.number_input('Measure the length of the string under tension',
                      value=100.0, step=0.1)
-st.markdown("4. Record the frequency $f_1$ of the sound produced by the string, using the Phyphox app, as indicated by the peak of the Fast Fourier Transform (FFT)")
+
+st.subheader('Method 1: Fast Fourier Transform')
+st.markdown("Record the frequency $f_1$ of the sound produced by the string, using the Phyphox app, as indicated by the peak of the FFT.")
 freq1[0] = st.number_input(label='First reading', step=0.1)
+
+st.subheader('Method 2: Period Measurement')
+st.markdown("Record the period $f_1$ of the sound produced by the string, using the Audio Scope function of the Phyphox app.")
+period[0] = st.number_input(label='First reading', step=0.1)
 
 df = pd.DataFrame({'length/cm': length, 'f/Hz': freq1, 'T/s': period, '1/T/Hz': freq2, '1/L/cm-1': length_inv})
 st.write(df)
