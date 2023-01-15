@@ -48,5 +48,9 @@ Analyse the problem and produce an appropriate plan for your investigation. In y
 """
 )
 
-df = pd.DataFrame({'length/cm': length, 'f/Hz': f, 'T/s': freq1, '1/T/Hz': freq2, '1/L/cm-1': length_inv})
+st.header('Part II: Data Collection')
+
+length, freq1, freq2, period, length_inv = np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16)
+
+df = pd.DataFrame({'length/cm': length, 'f/Hz': freq1, 'T/s': period, '1/T/Hz': freq2, '1/L/cm-1': length_inv})
 st.write(df)
