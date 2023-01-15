@@ -91,8 +91,8 @@ N = 8 # for computing root-mean-squared error
 if data_com is not None:
   df = pd.read_csv(data_com)
   st.write(df)
-  T2 = df['T^2/s^2']
-  length = df['length/cm']
+  freq = df['f/Hz']
+  length_inv = df['1/L /cm-1']
   N = np.count_nonzero(T2)
 
 freq = df['f/Hz']
