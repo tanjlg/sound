@@ -3,13 +3,13 @@
 Spyder Editor
 
 Tan Jing Long
-1st November 2021
+15 January 2023
 
 This is a Python script for deployment on Streamlit.
 
-The Streamlit app is intended to digitise the classic pendulum experiment we perform in secondary school, particularly for the data tabulation and analysis aspects.
+The Streamlit app is intended to digitise an inquiry activity we perform in secondary school, particularly for the data tabulation and analysis aspects.
 
-The content for the pendulum experiment is standard. Here, I have adapted it from Physics Matters Practical Book (3rd ed.) by Charles Chew and Ho Boon Tiong.
+The students will be investigating the relationship between frequency and length.
 """
 
 import numpy as np
@@ -20,7 +20,7 @@ from sklearn.linear_model import BayesianRidge, LinearRegression, ARDRegression
 from sklearn.metrics import mean_squared_error
 from PIL import Image
 
-st.title('Pendulum Experiment')
+st.title('Sound Activity')
 st.header('Part I: Data Collection')
 st.write('In Part I of the experiment, you will be physically performing the experiment and collecting the data in the laboratory.')
 
