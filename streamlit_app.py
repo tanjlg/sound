@@ -63,5 +63,18 @@ st.subheader('Method 2: Period Measurement')
 st.markdown("Record the period $T$ of the sound produced by the string, using the Audio Scope function of the Phyphox app.")
 period[0] = st.number_input(label='Period reading', step=0.1)
 
-df = pd.DataFrame({'length/cm': length, 'f/Hz': freq1, 'T/s': period, '1/T/Hz': freq2, '1/L/cm-1': length_inv})
+df = pd.DataFrame({'length/cm': length, 'f/Hz': freq1, 'T/s': period, '1/T /Hz': freq2, '1/L /cm-1': length_inv})
 st.write(df)
+
+@st.cache
+def convert_df(df):
+     # IMPORTANT: Cache the conversion to prevent computation on every rerun
+     return df.to_csv().encode('utf-8')
+
+csv_raw = convert_df(df)
+st.download_button(
+     label="Download the tabulated data as CSV",
+     data=csv_raw,
+     file_name='data_raw.csv',
+     mime='text/csv',
+ )
