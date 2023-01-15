@@ -24,7 +24,5 @@ st.title('Sound Activity')
 st.header('Part I: Data Collection')
 st.write('In Part I of the experiment, you will be physically performing the experiment and collecting the data in the laboratory.')
 
-st.markdown('1. From the fitted graph, estimate the length of the pendulum that will yield a period of 2.0 s')
-st.markdown('2. The formula for the period of a pendulum is $2\pi\sqrt{l/g}$, where $l$ is the length of the pendulum, and $g$ an unknown constant. Derive the value of the physical constant $g$, including its units and comment on its physical significiance.')
-
-    
+st.subheader('Aim')
+st.write('To investigate the relationship between the length of a string and the frequency of the sound produced when struck, for a string under tension.')
