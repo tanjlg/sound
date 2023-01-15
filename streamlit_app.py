@@ -21,7 +21,7 @@ from sklearn.metrics import mean_squared_error
 from PIL import Image
 
 st.title('Sound Activity')
-st.header('Part I: Data Collection')
+st.header('Part I: Experimental Set-Up')
 st.write('In Part I of the experiment, you will be physically performing the experiment and collecting the data in the laboratory.')
 
 st.subheader('Aim')
@@ -51,6 +51,11 @@ Analyse the problem and produce an appropriate plan for your investigation. In y
 st.header('Part II: Data Collection')
 
 length, freq1, freq2, period, length_inv = np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16)
+
+length[0] = st.number_input('Measure the length of the string under tension',
+                     value=100.0, step=0.1)
+st.markdown("4. Record the frequency $f_1$ of the sound produced by the string, using the Phyphox app, as indicated by the peak of the Fast Fourier Transform (FFT)")
+freq1[0] = st.number_input(label='First reading', step=0.1)
 
 df = pd.DataFrame({'length/cm': length, 'f/Hz': freq1, 'T/s': period, '1/T/Hz': freq2, '1/L/cm-1': length_inv})
 st.write(df)
