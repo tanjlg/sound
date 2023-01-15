@@ -111,7 +111,7 @@ plt.ylabel('Frequency/ Hz')
 if st.button('Plot'):
     st.pyplot(fig)
     
-st.markdown('10. By manipulating the line to minimise the error value, deduce the relationship between the period $T$ and length $l$ of the pendulum. The root-mean-square error (RMSE) is similar to the standard deviation of a dataset except that it calculates the sum of squared distances from the hypothesised interpolated period squared $\hat{T^2}$ instead of the mean $<T^2>$.')
+st.markdown('By manipulating the line to minimise the error value, deduce the relationship between the frequency $f$ and length $l$ of the string. The error calculates the vertical sum of squared distances from the line of best fit')
 m = st.slider('Gradient', min_value=0.00, max_value=0.10, value=0.04, step=0.0001)
 c = st.slider('Intercept (vertical)', min_value=-0.20, max_value=0.20, value=0.0, step=0.01)
 # root-mean-square deviation error
