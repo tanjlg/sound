@@ -12,13 +12,13 @@ The Streamlit app is intended to digitise the classic pendulum experiment we per
 The content for the pendulum experiment is standard. Here, I have adapted it from Physics Matters Practical Book (3rd ed.) by Charles Chew and Ho Boon Tiong.
 """
 
-#import numpy as np
-#import pandas as pd
-#from matplotlib import pyplot as plt
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
 import streamlit as st
-#from sklearn.linear_model import BayesianRidge, LinearRegression, ARDRegression
-#from sklearn.metrics import mean_squared_error
-#from PIL import Image
+from sklearn.linear_model import BayesianRidge, LinearRegression, ARDRegression
+from sklearn.metrics import mean_squared_error
+from PIL import Image
 
 st.title('Pendulum Experiment')
 st.header('Part I: Data Collection')
