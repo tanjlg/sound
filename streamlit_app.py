@@ -26,3 +26,22 @@ st.write('In Part I of the experiment, you will be physically performing the exp
 
 st.subheader('Aim')
 st.write('To investigate the relationship between the length of a string and the frequency of the sound produced when struck, for a string under tension.')
+
+st.subheader('Apparatus')
+st.write('Retort stand  \n',
+         'Sets of boss and clamp  \n',
+         'Metre rule  \n',
+         'Wooden blocks  \n',
+         'Tuning fork  \n',
+         'Ukelele')
+
+st.subheader('Procedure')
+st.markdown(
+"""
+Analyse the problem and produce an appropriate plan for your investigation. In your plan, you should:
+- state the problem you are investigating
+- list all variables (variables to be kept constant and those to be changed)
+- write your suggested procedure as a series of step-by-step instructions
+-
+"""
+)
