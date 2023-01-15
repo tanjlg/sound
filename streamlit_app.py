@@ -79,11 +79,10 @@ st.download_button(
      mime='text/csv',
  )
 
-
 st.header('Part III: Data Analysis')
 st.write('In Part III of the experiment, you will be processing the collected data and inferring the relationship between the period and length of the pendulum.')
 
-st.markdown("7. By using an Excel Spreadsheet or otherwise, calculate $1/L /cm$ and record it in the corresponding entry in the CSV file.")
+st.markdown("By using an Excel Spreadsheet or otherwise, calculate $1/L /cm$ and record it in the corresponding entry in the CSV file.")
 
 data_com = st.file_uploader("Upload the csv file with the inputted raw data and the derived quantities you computed.")
 N = 8 # for computing root-mean-squared error
@@ -98,7 +97,7 @@ if data_com is not None:
 freq = df['f/Hz']
 length_inv = df['1/L /cm-1']
          
-st.markdown("Plot the graph of $f/$Hz against $ \frac{1}{L}/$cm$^{-1}$.")
+st.markdown("Plot the graph of $f/$Hz against $1/L/$cm$^{-1}$.")
 fig, ax = plt.subplots()
 plt.plot(length_inv, freq, 'x', markersize=3)
 plt.title('Scatterplot of Period squared against length of the pendulum')
