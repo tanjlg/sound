@@ -60,7 +60,7 @@ st.markdown("Record the frequency $f_1$ of the sound produced by the string, usi
 freq1[0] = st.number_input(label='First reading', step=0.1)
 
 st.subheader('Method 2: Period Measurement')
-st.markdown("Record the period $f_1$ of the sound produced by the string, using the Audio Scope function of the Phyphox app.")
+st.markdown("Record the period $T$ of the sound produced by the string, using the Audio Scope function of the Phyphox app.")
 period[0] = st.number_input(label='First reading', step=0.1)
 
 df = pd.DataFrame({'length/cm': length, 'f/Hz': freq1, 'T/s': period, '1/T/Hz': freq2, '1/L/cm-1': length_inv})
