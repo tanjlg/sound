@@ -50,20 +50,16 @@ Analyse the problem and produce an appropriate plan for your investigation. In y
 
 st.header('Part II: Data Collection')
 
-length, freq1, freq2, period, length_inv = np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16)
+length, freq, period, length_inv = np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16)
 
 length[0] = st.number_input('Measure the length of the string under tension',
                      value=100.0, step=0.1)
 
 st.subheader('Method 1: Fast Fourier Transform')
 st.markdown("Record the frequency $f_1$ of the sound produced by the string, using the Phyphox app, as indicated by the peak of the FFT.")
-freq1[0] = st.number_input(label='Frequency reading', step=0.1)
+freq[0] = st.number_input(label='Frequency reading', step=0.1)
 
-st.subheader('Method 2: Period Measurement')
-st.markdown("Record the period $T$ of the sound produced by the string, using the Audio Scope function of the Phyphox app.")
-period[0] = st.number_input(label='Period reading', step=0.1)
-
-df = pd.DataFrame({'length/cm': length, 'f/Hz': freq1, 'T/s': period, '1/T /Hz': freq2, '1/L /cm-1': length_inv})
+df = pd.DataFrame({'length/cm': length, 'f/Hz': freq, '1/L /cm-1': length_inv})
 st.write(df)
 
 @st.cache
