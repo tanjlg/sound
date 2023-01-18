@@ -53,7 +53,7 @@ st.header('Part II: Data Collection')
 length, freq, period, length_inv = np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16)
 
 length[0] = st.number_input('Measure the length of the string under tension',
-                     value=100.0, step=0.1)
+                     value=40.0, step=0.1)
 
 st.subheader('Method 1: Frequency Analyser')
 st.markdown("Record the frequency $f_1$ of the sound produced by the string, using the Phyphox app, as indicated by the peak signal of the frequency spectrum.")
