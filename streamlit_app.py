@@ -50,7 +50,7 @@ Analyse the problem and produce an appropriate plan for your investigation. In y
 
 st.header('Part II: Data Collection')
 
-length, freq, period, length_inv = np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16)
+length, freq, period, length_inv = np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16)
 
 length[0] = st.number_input('Measure the length of the string under tension',
                      value=100.0, step=0.1)
