@@ -88,7 +88,7 @@ if data_com is not None:
   st.write(df)
   freq = df['f/Hz']
   length_inv = df['1/L /cm-1']
-  N = np.count_nonzero(T2)
+  N = np.count_nonzero(freq)
 
 freq = df['f/Hz']
 length_inv = df['1/L /cm-1']
