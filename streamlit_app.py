@@ -117,7 +117,7 @@ st.write('Error: ')
 st.write(rms_error)
 
 plt.plot(length_inv, m*length+c)
-plt.title('Linear fit of Period squared against length of the pendulum')
+plt.title('Linear fit of frequency against 1/length.')
 plt.xlim(0,120)
 plt.ylim(0,4.5)     
 st.pyplot(fig)
