@@ -116,7 +116,7 @@ rms_error= np.sqrt(sum_squared_error/N)
 st.write('Error: ')
 st.write(rms_error)
 
-plt.plot(length_inv, m*length+c)
+plt.plot(length_inv, m*length_inv+c)
 plt.title('Linear fit of frequency against 1/length')
 #plt.xlim(0,120)
 #plt.ylim(0,4.5)     
