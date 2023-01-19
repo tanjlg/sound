@@ -108,7 +108,7 @@ if st.button('Plot'):
     
 st.markdown('By manipulating the line to minimise the error value, deduce the relationship between the frequency $f$ and length $l$ of the string. The error calculates the vertical sum of squared distances from the line of best fit')
 m = st.slider('Gradient', min_value=14.0, max_value=16.0, value=15.0, step=0.1)
-c = st.slider('Intercept (vertical)', min_value=-1, max_value=1, value=0, step=0.05)
+c = st.slider('Intercept (vertical)', min_value=-1.00, max_value=1.00, value=0.00, step=0.05)
 # root-mean-square deviation error
 residuals = freq-(m*length_inv+c)
 sum_squared_error = np.sum(residuals**2)
