@@ -53,7 +53,7 @@ st.header('Part II: Data Collection')
 length, freq, period, length_inv = np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16), np.zeros(8, dtype=np.float16)
 
 length[0] = st.number_input('Measure the length of the string under tension',
-                     value=40.0, step=0.1)
+                     value=30.0, step=0.1)
 
 st.subheader('Method 1: Frequency Analyser')
 st.markdown("Record the frequency $f_1$ of the sound produced by the string, using the Phyphox app, as indicated by the peak signal of the frequency spectrum.")
@@ -107,7 +107,7 @@ if st.button('Plot'):
     st.pyplot(fig)
     
 st.markdown('By manipulating the line to minimise the error value, deduce the relationship between the frequency $f$ and length $l$ of the string. The error calculates the vertical sum of squared distances from the line of best fit')
-m = st.slider('Gradient', min_value=14000, max_value=16000, value=15000, step=50)
+m = st.slider('Gradient', min_value=14000, max_value=16000, value=15000, step=25)
 c = st.slider('Intercept (vertical)', min_value=-100, max_value=100, value=0, step=2)
 # root-mean-square deviation error
 residuals = freq-(m*length_inv+c)
