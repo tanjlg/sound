@@ -122,11 +122,11 @@ plt.title('Linear fit of frequency against 1/length')
 #plt.ylim(0,4.5)     
 st.pyplot(fig)
 
-if st.button('Hint'):         
-         with open('./data_processed.csv') as f:
-                  st.download_button(
-                           label="Download artificial data as CSV",
-                           data=f,
-                           file_name='artificial_data.csv',
-                           mime='text/csv',
-                           )
+#if st.button('Hint'):         
+#         with open('./data_processed.csv') as f:
+#                  st.download_button(
+#                           label="Download artificial data as CSV",
+#                           data=f,
+#                           file_name='artificial_data.csv',
+#                           mime='text/csv',
+#                           )
